@@ -5,7 +5,7 @@ require 'rspec/core/rake_task'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "gme-nokogiri-happymapper"
+    gem.name = "nokogiri-happymapper"
     gem.summary = %Q{Provides a simple way to map XML to Ruby Objects}
     gem.description = "Object to XML Mapping Library, using Nokogiri (fork from John Nunemaker's Happymapper)"
     gem.email = "damien@meliondesign.com"
@@ -15,6 +15,7 @@ begin
     gem.add_development_dependency "rspec", "~> 2.0"
     gem.files = FileList['lib/**/*.rb']
     gem.test_files = FileList['spec/**/*']
+    gem.version = File.read('VERSION').chomp
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
